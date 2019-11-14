@@ -5,12 +5,22 @@
 html {
   font-family: "Open Sans", sans-serif;
   body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: $white;
     color: $black;
+    margin: 0;
+
     #CV {
+      display: flex;
+      flex-direction: column;
       max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
+      padding-left: 10px;
+      padding-right: 10px;
+      h2 {
+        border-bottom: 1px solid $orange;
+      }
 
       #contact-info {
         @include flexSeparate();
@@ -20,17 +30,43 @@ html {
           padding: 0px 5px;
         }
       }
+
+      .dated-info {
+        @include flexCenter();
+        flex-direction: column;
+        background-color: $gray;
+        padding: 0 5px;
+        .element {
+          @include flexSeparate();
+          width: 100%;
+          padding: 5px 5px;
+          &:nth-child(even) {
+            background-color: $white;
+          }
+          .more-info {
+            display: none;
+            text-align: left;
+            @media print {
+              display: block;
+            }
+            ul {
+              margin: 0;
+            }
+          }
+        }
+      }
     }
 
     footer {
       @include flexSpace();
-      position: fixed;
-      left: 0;
-      bottom: 0;
       width: 100%;
       padding: 15px 0;
+      margin-top: 10px;
       background-color: $black;
       color: $white;
+      @media print {
+        display: none;
+      }
 
       a {
         text-decoration: none;

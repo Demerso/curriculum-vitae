@@ -14,13 +14,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  & *:first-child {
+  & > *:first-child {
     text-align: left;
   }
-  & *:last-child {
+  & > *:last-child {
     text-align: right;
   }
-  & *:not(:first-child):not(:last-child) {
+  & > *:not(:first-child):not(:last-child) {
     text-align: center;
   }
 }

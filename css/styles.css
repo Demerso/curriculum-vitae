@@ -7,14 +7,36 @@ html {
 }
 
 html body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #f7f7f2;
   color: #191919;
+  margin: 0;
 }
 
 html body #CV {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+html body #CV h2 {
+  border-bottom: 1px solid #f78154;
 }
 
 html body #CV #contact-info {
@@ -31,20 +53,83 @@ html body #CV #contact-info {
   background-color: #ede3e4;
 }
 
-html body #CV #contact-info *:first-child {
+html body #CV #contact-info > *:first-child {
   text-align: left;
 }
 
-html body #CV #contact-info *:last-child {
+html body #CV #contact-info > *:last-child {
   text-align: right;
 }
 
-html body #CV #contact-info *:not(:first-child):not(:last-child) {
+html body #CV #contact-info > *:not(:first-child):not(:last-child) {
   text-align: center;
 }
 
 html body #CV #contact-info * {
   padding: 0px 5px;
+}
+
+html body #CV .dated-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ede3e4;
+  padding: 0 5px;
+}
+
+html body #CV .dated-info .element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 5px 5px;
+}
+
+html body #CV .dated-info .element > *:first-child {
+  text-align: left;
+}
+
+html body #CV .dated-info .element > *:last-child {
+  text-align: right;
+}
+
+html body #CV .dated-info .element > *:not(:first-child):not(:last-child) {
+  text-align: center;
+}
+
+html body #CV .dated-info .element:nth-child(even) {
+  background-color: #f7f7f2;
+}
+
+html body #CV .dated-info .element .more-info {
+  display: none;
+  text-align: left;
+}
+
+@media print {
+  html body #CV .dated-info .element .more-info {
+    display: block;
+  }
+}
+
+html body #CV .dated-info .element .more-info ul {
+  margin: 0;
 }
 
 html body footer {
@@ -57,13 +142,17 @@ html body footer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   padding: 15px 0;
+  margin-top: 10px;
   background-color: #191919;
   color: #f7f7f2;
+}
+
+@media print {
+  html body footer {
+    display: none;
+  }
 }
 
 html body footer a {
