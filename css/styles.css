@@ -69,6 +69,10 @@ html body footer {
 html body footer a {
   text-decoration: none;
   color: #f7f7f2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 html body footer a:hover {
@@ -132,6 +136,10 @@ html body footer a:hover {
   text-decoration: none;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #nolang body #links a:hover {

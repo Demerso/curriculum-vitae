@@ -11,16 +11,17 @@ html {
       max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
+
       #contact-info {
         @include flexSeparate();
         padding: 15px 5px;
         background-color: $gray;
-
         & * {
           padding: 0px 5px;
         }
       }
     }
+
     footer {
       @include flexSpace();
       position: fixed;
@@ -34,7 +35,7 @@ html {
       a {
         text-decoration: none;
         color: $white;
-
+        user-select: none;
         &:hover {
           cursor: pointer;
         }
@@ -57,10 +58,12 @@ html {
     h1 {
       text-align: center;
     }
+
     #links {
       @include flexCenter();
       flex-direction: column;
       margin: 0 15px;
+
       a {
         border-radius: 5px;
         box-sizing: border-box;
@@ -72,6 +75,7 @@ html {
         padding: 15px;
         text-decoration: none;
         transition: 0.2s ease-in-out;
+        user-select: none;
         &:hover {
           cursor: pointer;
           background-color: $gray;
