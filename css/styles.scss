@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import "_palette.scss";
+@import "_mixins.scss";
+
+html {
+  font-family: "Open Sans", sans-serif;
+  body {
+    background-color: $white;
+    color: $black;
+    #CV {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      #contact-info {
+        @include flexSeparate();
+        padding: 15px;
+        background-color: $gray;
+      }
+    }
+    footer {
+      @include flexSpace();
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 15px;
+      background-color: $black;
+      color: $white;
+
+      a {
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/*********************************
+* This part is for the page in   *
+* which the user has no language *
+*********************************/
+#nolang {
+  body {
+    @include flexCenter();
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    h1 {
+      text-align: center;
+    }
+    #links {
+      @include flexCenter();
+      flex-direction: column;
+      margin: 0 15px;
+      a {
+        border-radius: 5px;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        color: $white;
+        background-color: $black;
+        padding: 15px;
+        text-decoration: none;
+        transition: 0.2s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          background-color: $gray;
+          color: black;
+        }
+      }
+    }
+  }
+}

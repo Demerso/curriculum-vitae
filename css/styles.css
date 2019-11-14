@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+/* Coolors Exported Palette - coolors.co/628395-96897b-f78154-191919-ede3e4 */
+/* HSL */
+/* RGB */
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+html body {
+  background-color: #f7f7f2;
+  color: #191919;
+}
+
+html body #CV {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html body #CV #contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  background-color: #ede3e4;
+}
+
+html body #CV #contact-info *:first-child {
+  text-align: left;
+}
+
+html body #CV #contact-info *:last-child {
+  text-align: right;
+}
+
+html body #CV #contact-info *:not(:first-child):not(:last-child) {
+  text-align: center;
+}
+
+html body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: #191919;
+  color: #f7f7f2;
+}
+
+html body footer a {
+  text-decoration: none;
+  color: #f7f7f2;
+}
+
+html body footer a:hover {
+  cursor: pointer;
+}
+
+/*********************************
+* This part is for the page in   *
+* which the user has no language *
+*********************************/
+#nolang body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+#nolang body h1 {
+  text-align: center;
+}
+
+#nolang body #links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 15px;
+}
+
+#nolang body #links a {
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  color: #f7f7f2;
+  background-color: #191919;
+  padding: 15px;
+  text-decoration: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#nolang body #links a:hover {
+  cursor: pointer;
+  background-color: #ede3e4;
+  color: black;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,26 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexSpace {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@mixin flexSeparate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & *:first-child {
+    text-align: left;
+  }
+  & *:last-child {
+    text-align: right;
+  }
+  & *:not(:first-child):not(:last-child) {
+    text-align: center;
+  }
+}
