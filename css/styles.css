@@ -27,7 +27,7 @@ html body #CV #contact-info {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 15px;
+  padding: 15px 5px;
   background-color: #ede3e4;
 }
 
@@ -41,6 +41,10 @@ html body #CV #contact-info *:last-child {
 
 html body #CV #contact-info *:not(:first-child):not(:last-child) {
   text-align: center;
+}
+
+html body #CV #contact-info * {
+  padding: 0px 5px;
 }
 
 html body footer {
@@ -57,7 +61,7 @@ html body footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 15px;
+  padding: 15px 0;
   background-color: #191919;
   color: #f7f7f2;
 }
