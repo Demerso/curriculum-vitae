@@ -23,6 +23,8 @@ html body {
 }
 
 html body #CV {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +33,7 @@ html body #CV {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 1000px;
+  width: 100%;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -43,9 +46,6 @@ html body #CV #contact-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -63,6 +63,18 @@ html body #CV #contact-info > *:last-child {
 
 html body #CV #contact-info > *:not(:first-child):not(:last-child) {
   text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  html body #CV #contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  html body #CV #contact-info > * {
+    text-align: left;
+  }
 }
 
 html body #CV #contact-info * {
@@ -91,9 +103,6 @@ html body #CV .dated-info .element {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -111,6 +120,18 @@ html body #CV .dated-info .element > *:last-child {
 
 html body #CV .dated-info .element > *:not(:first-child):not(:last-child) {
   text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  html body #CV .dated-info .element {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  html body #CV .dated-info .element > * {
+    text-align: left;
+  }
 }
 
 html body #CV .dated-info .element:nth-child(even) {

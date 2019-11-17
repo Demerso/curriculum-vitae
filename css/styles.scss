@@ -13,9 +13,11 @@ html {
     margin: 0;
 
     #CV {
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       max-width: 1000px;
+      width: 100%;
       padding-left: 10px;
       padding-right: 10px;
       h2 {
