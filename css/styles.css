@@ -139,7 +139,6 @@ html body #CV .dated-info .element:nth-child(even) {
 }
 
 html body #CV .dated-info .element .more-info {
-  display: none;
   text-align: left;
 }
 
@@ -151,6 +150,25 @@ html body #CV .dated-info .element .more-info {
 
 html body #CV .dated-info .element .more-info ul {
   margin: 0;
+}
+
+html body #CV .list-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+html body #CV .list-info > div {
+  display: list-item;
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 400px) {
+  html body #CV .list-info {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
 }
 
 html body footer {

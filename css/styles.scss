@@ -46,7 +46,7 @@ html {
             background-color: $white;
           }
           .more-info {
-            display: none;
+            //display: none;
             text-align: left;
             @media print {
               display: block;
@@ -55,6 +55,20 @@ html {
               margin: 0;
             }
           }
+        }
+      }
+
+      .list-info {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        & > div {
+          display: list-item;
+          margin-left: 40px;
+        }
+
+        @media screen and (max-width: 400px) {
+          grid-template-columns: auto;
         }
       }
     }
