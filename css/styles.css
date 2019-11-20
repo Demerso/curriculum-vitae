@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-/* Coolors Exported Palette - coolors.co/628395-96897b-f78154-191919-ede3e4 */
-/* HSL */
-/* RGB */
 html {
   font-family: "Open Sans", sans-serif;
 }
@@ -17,8 +14,8 @@ html body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f7f7f2;
-  color: #191919;
+  background-color: white;
+  color: black;
   margin: 0;
 }
 
@@ -39,7 +36,7 @@ html body #CV {
 }
 
 html body #CV h2 {
-  border-bottom: 1px solid #f78154;
+  border-bottom: 1px solid #fa8625;
 }
 
 html body #CV #contact-info {
@@ -50,7 +47,7 @@ html body #CV #contact-info {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 15px 5px;
-  background-color: #ede3e4;
+  background-color: #f2f6f2;
 }
 
 html body #CV #contact-info > *:first-child {
@@ -82,6 +79,10 @@ html body #CV #contact-info * {
 }
 
 html body #CV .dated-info {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,7 +96,7 @@ html body #CV .dated-info {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #ede3e4;
+  background-color: #f2f6f2;
   padding: 0 5px;
 }
 
@@ -135,10 +136,15 @@ html body #CV .dated-info .element > *:not(:first-child):not(:last-child) {
 }
 
 html body #CV .dated-info .element:nth-child(even) {
-  background-color: #f7f7f2;
+  background-color: white;
 }
 
 html body #CV .dated-info .element .more-info {
+  max-height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   text-align: left;
 }
 
@@ -182,10 +188,10 @@ html body footer {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 100%;
-  padding: 15px 0;
+  padding: 10px 0;
   margin-top: 10px;
-  background-color: #191919;
-  color: #f7f7f2;
+  background-color: #1e293a;
+  color: white;
 }
 
 @media print {
@@ -194,17 +200,26 @@ html body footer {
   }
 }
 
+html body footer * {
+  text-align: center;
+  padding: 5px 5px;
+}
+
 html body footer a {
   text-decoration: none;
-  color: #f7f7f2;
+  color: white;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  border-radius: 5px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 html body footer a:hover {
   cursor: pointer;
+  background-color: #da414a;
 }
 
 /*********************************
@@ -258,8 +273,8 @@ html body footer a:hover {
   width: 100%;
   text-align: center;
   margin: 10px 0;
-  color: #f7f7f2;
-  background-color: #191919;
+  color: white;
+  background-color: #1e293a;
   padding: 15px;
   text-decoration: none;
   -webkit-transition: 0.2s ease-in-out;
@@ -272,7 +287,7 @@ html body footer a:hover {
 
 #nolang body #links a:hover {
   cursor: pointer;
-  background-color: #ede3e4;
+  background-color: #b5aaad;
   color: black;
 }
 /*# sourceMappingURL=styles.css.map */

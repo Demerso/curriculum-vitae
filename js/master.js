@@ -16,3 +16,21 @@ function changeLang(lang = null) {
     window.location.pathname = "/curriculum-vitae/en";
   }
 }
+
+window.onload = function() {
+  var dated_info = document.getElementsByClassName("more-info");
+  for (let index = 0; index < dated_info.length; index++) {
+    const element = dated_info[index];
+    element.parentElement.parentElement.addEventListener("click", function() {
+      if (element.style.maxHeight == "1000px") {
+        element.style.maxHeight = "0px";
+        element.style.opacity = 0;
+        element.style.visibility = "hidden";
+      } else {
+        element.style.maxHeight = "1000px";
+        element.style.opacity = 1;
+        element.style.visibility = "visible";
+      }
+    });
+  }
+};
