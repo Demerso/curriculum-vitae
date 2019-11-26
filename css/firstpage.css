@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 #nolang body {
   font-family: "Open Sans", sans-serif;
-  background-color: white;
+  background-color: #02040f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,6 +21,7 @@
 }
 
 #nolang body h1 {
+  color: #ebebeb;
   text-align: center;
 }
 
@@ -48,8 +49,8 @@
   width: 100%;
   text-align: center;
   margin: 10px 0;
-  color: white;
-  background-color: #02040f;
+  background-color: #ebebeb;
+  color: #02040f;
   padding: 15px;
   text-decoration: none;
   -webkit-transition: 0.2s ease-in-out;
@@ -62,7 +63,7 @@
 
 #nolang body #links a:hover {
   cursor: pointer;
-  background-color: #00a6a6;
-  color: black;
+  color: #ebebeb;
+  background-color: #d81159;
 }
 /*# sourceMappingURL=firstpage.css.map */
