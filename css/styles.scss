@@ -2,14 +2,6 @@
 @import "_palette.scss";
 @import "_mixins.scss";
 
-/*
-@viewport {
-  width: device-width;
-  height: device-height;
-  initial-scale: 1;
-  usrer-scalable: no;
-}*/
-
 * {
   margin: 0;
   padding: 0;
@@ -32,9 +24,9 @@ menu {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
-  flex-direction: column;
+  flex-flow: wrap-reverse column;
   position: fixed;
   visibility: visible;
   top: 0;
@@ -68,6 +60,7 @@ menu {
   }
   &.hidden {
     div {
+      visibility: hidden;
       opacity: 0;
     }
   }
@@ -138,23 +131,50 @@ nav {
   }
 }
 
-content {
+main {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: nowrap row;
   height: 100vh;
   section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 10px;
     width: 100vw;
+    h1 {
+      font-size: 2em;
+    }
+    content {
+      font-size: 1.1em;
+      padding-left: 10px;
+      em {
+        font-style: normal;
+        color: $light_accent;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 500px) {
-  content {
+  main {
     flex-direction: column;
     height: auto;
     section {
       height: 100vh;
     }
+  }
+}
+
+@media print {
+  body {
+    color: black !important;
+  }
+  nav,
+  menu {
+    display: none;
+  }
+  main {
+    flex-direction: column;
+    height: auto;
   }
 }

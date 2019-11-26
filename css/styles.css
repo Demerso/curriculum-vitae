@@ -1,11 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-/*
-@viewport {
-  width: device-width;
-  height: device-height;
-  initial-scale: 1;
-  usrer-scalable: no;
-}*/
 * {
   margin: 0;
   padding: 0;
@@ -40,16 +33,16 @@ menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: wrap-reverse column;
+          flex-flow: wrap-reverse column;
   position: fixed;
   visibility: visible;
   top: 0;
@@ -92,6 +85,7 @@ menu div:hover span {
 }
 
 menu.hidden div {
+  visibility: hidden;
   opacity: 0;
 }
 
@@ -200,34 +194,73 @@ nav.open > div:nth-child(4) {
   opacity: 0;
 }
 
-content {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+      -ms-flex-flow: nowrap row;
+          flex-flow: nowrap row;
   height: 100vh;
 }
 
-content section {
+main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px;
   width: 100vw;
 }
 
+main section h1 {
+  font-size: 2em;
+}
+
+main section content {
+  font-size: 1.1em;
+  padding-left: 10px;
+}
+
+main section content em {
+  font-style: normal;
+  color: #00ffff;
+}
+
 @media screen and (max-width: 500px) {
-  content {
+  main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     height: auto;
   }
-  content section {
+  main section {
     height: 100vh;
+  }
+}
+
+@media print {
+  body {
+    color: black !important;
+  }
+  nav,
+  menu {
+    display: none;
+  }
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */

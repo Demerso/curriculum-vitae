@@ -2,8 +2,9 @@
 @import "_palette.scss";
 @import "_mixins.scss";
 
-#nolang {
+html {
   body {
+    overflow: hidden;
     font-family: "Open Sans", sans-serif;
     background-color: $dark_shade;
     @include flexCenter();

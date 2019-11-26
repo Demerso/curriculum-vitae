@@ -25,18 +25,15 @@
     <title>Olivier Demers</title>
   </head>
   <body>
-    <menu>
+    <menu class="hidden">
       <div id="aboutlink" onclick="gotoPage('about');">
         <span>À propos</span>
       </div>
       <div id="schoollink" onclick="gotoPage('school');">
         <span>Scolarité</span>
       </div>
-      <div id="explink" onclick="gotoPage('exp');">
+      <div id="experiencelink" onclick="gotoPage('experience');">
         <span>Expérience</span>
-      </div>
-      <div id="knowledgelink" onclick="gotoPage('knowledge');">
-        <span>Aptitudes</span>
       </div>
       <div id="portfoliolink" onclick="gotoPage('portfolio');">
         <span>Portfolio</span>
@@ -45,8 +42,8 @@
         <span>Contact</span>
       </div>
     </menu>
-    <content>
-      <nav onclick="toggleMenu()" class="open">
+    <main>
+      <nav onclick="toggleMenu()">
         <div></div>
         <div></div>
         <div></div>
@@ -54,28 +51,46 @@
       </nav>
       <section id="about">
         <h1>Olivier Demers</h1>
-        <h2>À propos de moi:</h2>
+        <content>
+          <p>
+            Je suis un <em>passionné</em> de la robotique, la programmation
+            l'informatique.
+          </p>
+          <p>
+            Je parle courament <em>Français</em> et <em>Anglais</em>, en plus
+            d'avoir des bases en <em>Espagnol</em>.
+          </p>
+          <p>
+            J'ai appris à programmer de façon <em>autonome</em>, mais
+            j'approfondis mes connaissances à l'université.
+          </p>
+          <p>Je suis <em>engagé</em> et toujours prêt à <em>travailler</em>.</p>
+        </content>
       </section>
       <section id="school">
-        <h1>Formation Scolaire:</h1>
-        school
+        <h1>Formation Scolaire</h1>
+        <content>
+          <p>Voici mon parcours scolaire</p>
+        </content>
       </section>
-      <section id="exp">
-        <h1>Mes expériences de travail:</h1>
-        experience
-      </section>
-      <section id="knowledge">
-        <h1>Mes aptitudes:</h1>
-        knowledge
+      <section id="experience">
+        <h1>Mes expériences de travail</h1>
+        <content>
+          <p>Voici mes expériences de travail</p>
+        </content>
       </section>
       <section id="portfolio">
-        <h1>Mon portfolio:</h1>
-        portfolio
+        <h1>Mon portfolio</h1>
+        <content>
+          <p>Voici mes projets</p>
+        </content>
       </section>
       <section id="contact">
         <h1>Me contacter</h1>
-        contact
+        <content>
+          <p>Voici comment me contacter</p>
+        </content>
       </section>
-    </content>
+    </main>
   </body>
 </html>

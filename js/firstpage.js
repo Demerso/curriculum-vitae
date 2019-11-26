@@ -1,7 +1,7 @@
 function changeLang(lang = null) {
   const tl = new TimelineMax();
   tl.fromTo(
-    document.getElementById("nolang"),
+    document.getElementsByTagName("body"),
     0.5,
     { opacity: "1" },
     { opacity: "0" }
