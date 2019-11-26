@@ -2,148 +2,160 @@
 @import "_palette.scss";
 @import "_mixins.scss";
 
-html {
+/*
+@viewport {
+  width: device-width;
+  height: device-height;
+  initial-scale: 1;
+  usrer-scalable: no;
+}*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
   font-family: "Open Sans", sans-serif;
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    color: black;
-    margin: 0;
+  background-color: $dark_shade;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  color: $light_shade;
+}
 
-    #CV {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      max-width: 1000px;
-      width: 100%;
-      padding-left: 10px;
-      padding-right: 10px;
-      h2 {
-        border-bottom: 1px solid $main_color;
-      }
-
-      #contact-info {
-        @include flexSeparate();
-        padding: 15px 5px;
-        background-color: $light_shade;
-        & * {
-          padding: 0px 5px;
-        }
-      }
-
-      .dated-info {
-        user-select: none;
-        @include flexCenter();
-        flex-direction: column;
-        background-color: $light_shade;
-        padding: 0 5px;
-        .element {
-          @include flexSeparate();
-          width: 100%;
-          padding: 5px 5px;
-          &:nth-child(even) {
-            background-color: white;
-          }
-          .more-info {
-            max-height: 0px;
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.5s ease-in-out;
-            text-align: left;
-            @media print {
-              display: block;
-            }
-            ul {
-              margin: 0;
-            }
-          }
-        }
-      }
-
-      .list-info {
-        display: grid;
-        grid-template-columns: auto auto;
-
-        & > div {
-          display: list-item;
-          margin-left: 40px;
-        }
-
-        @media screen and (max-width: 400px) {
-          grid-template-columns: auto;
-        }
-      }
-    }
-
-    footer {
-      @include flexSpace();
-      width: 100%;
-      padding: 10px 0;
-      margin-top: 10px;
+menu {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  bottom: 95px;
+  right: 0;
+  width: 100%;
+  max-width: 300px;
+  z-index: 1;
+  div {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    span {
+      display: block;
+      margin: 10px;
+      padding: 15px;
+      outline: 2px solid $light_shade;
+      transform: rotate(5deg);
+      font-size: 1em;
+      transition: 0.2s ease-in-out;
       background-color: $dark_shade;
-      color: white;
-      @media print {
-        display: none;
-      }
-      * {
-        text-align: center;
-        padding: 5px 5px;
-      }
-      a {
-        text-decoration: none;
-        color: white;
-        user-select: none;
-        border-radius: 5px;
-        transition: 0.2s ease-in-out;
-        &:hover {
-          cursor: pointer;
-          background-color: $dark_accent;
-        }
-      }
+    }
+    &.active span {
+      background-color: $main_color;
+    }
+    &:hover span {
+      color: $dark_shade;
+      background-color: $light_shade;
+      font-size: 1.5em;
+      transform: rotate(0deg);
+    }
+  }
+  &.hidden {
+    div {
+      opacity: 0;
     }
   }
 }
 
-/*********************************
-* This part is for the page in   *
-* which the user has no language *
-*********************************/
-#nolang {
-  body {
-    @include flexCenter();
-    flex-direction: column;
-    display: flex;
-    height: 100vh;
-    margin: 0;
-    h1 {
-      text-align: center;
+nav {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  @include flexCenter;
+  flex-direction: column;
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  margin: 5px;
+  background-color: $main_color;
+  border-radius: 50%;
+  bottom: 10px;
+  right: 10px;
+  border: 0.5vh solid $light_shade;
+  box-shadow: 0px 0px 10px 0px black;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+  &:hover {
+    box-shadow: 0px 0px 10px 0px $main_color, inset 0px 0px 10px 0px black;
+  }
+
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: $light_shade;
+    margin: 2.5px 0;
+    transition: 0.2s ease-in-out, opacity 0.1s ease-in-out 0.1s;
+    border-radius: 2px;
+    &:nth-child(1) {
+      transition: 0.2s ease-in-out 0.2s;
+      transform: translate(0, 0);
     }
+    &:nth-child(3) {
+      position: absolute;
+      top: calc(50% - 5px);
+    }
+    &:nth-child(4) {
+      transition: 0.2s ease-in-out 0.2s;
+      transform: translate(0, 0);
+    }
+  }
 
-    #links {
-      @include flexCenter();
-      flex-direction: column;
-      margin: 0 15px;
+  &.open {
+    background-color: $dark_shade;
+    & > div:nth-child(1) {
+      transition: 0.2s ease-in-out, opacity 0.1s ease-in-out 0.1s;
+      transform: translate(0, 10px);
+      opacity: 0;
+    }
+    & > div:nth-child(2) {
+      transition: transform 0.2s ease-in-out 0.2s;
+      transform: rotate(45deg);
+    }
+    & > div:nth-child(3) {
+      transition: transform 0.2s ease-in-out 0.2s;
+      transform: rotate(-45deg);
+    }
+    & > div:nth-child(4) {
+      transition: 0.2s ease-in-out, opacity 0.1s ease-in-out 0.1s;
+      transform: translate(0, -10px);
+      opacity: 0;
+    }
+  }
+}
 
-      a {
-        border-radius: 5px;
-        box-sizing: border-box;
-        width: 100%;
-        text-align: center;
-        margin: 10px 0;
-        color: white;
-        background-color: $dark_shade;
-        padding: 15px;
-        text-decoration: none;
-        transition: 0.2s ease-in-out;
-        user-select: none;
-        &:hover {
-          cursor: pointer;
-          background-color: $light_accent;
-          color: black;
-        }
-      }
+content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100vh;
+  section {
+    padding: 10px;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  content {
+    flex-direction: column;
+    height: auto;
+    section {
+      height: 100vh;
     }
   }
 }

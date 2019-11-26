@@ -11,26 +11,38 @@ function changeLang(lang = null) {
     "lang=" + lang + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
 
   if (lang.search("fr") != -1) {
-    window.location.pathname = "/curriculum-vitae/fr";
+    window.location.pathname = "odemers/curriculum-vitae/fr";
   } else {
-    window.location.pathname = "/curriculum-vitae/en";
+    window.location.pathname = "odemers/curriculum-vitae/en";
   }
 }
 
-window.onload = function() {
-  var dated_info = document.getElementsByClassName("more-info");
-  for (let index = 0; index < dated_info.length; index++) {
-    const element = dated_info[index];
-    element.parentElement.parentElement.addEventListener("click", function() {
-      if (element.style.maxHeight == "1000px") {
-        element.style.maxHeight = "0px";
-        element.style.opacity = 0;
-        element.style.visibility = "hidden";
-      } else {
-        element.style.maxHeight = "1000px";
-        element.style.opacity = 1;
-        element.style.visibility = "visible";
-      }
-    });
+function toggleMenu() {
+  const button = document.getElementsByTagName("nav")[0];
+  const menu = document.getElementsByTagName("menu")[0];
+  button.classList.toggle("open");
+  menu.classList.toggle("hidden");
+}
+
+function gotoPage(pg) {
+  const links = document.getElementsByTagName("menu")[0].children;
+  for (let index = 0; index < links.length; index++) {
+    const link = links[index];
+    link.classList.remove("active");
   }
+  document.getElementById(pg + "link").classList.add("active");
+  document.getElementById(pg).scrollIntoView();
+  document.cookie = "active=" + pg;
+}
+
+window.onload = function() {
+  var scroll = document.scrollingElement.scrollLeft;
+  const links = document.getElementsByTagName("menu")[0].children;
+  var active;
+  if (document.cookie.search("active") != -1) {
+    active = /active\=([^\;]+)/i.exec(document.cookie)[1];
+  } else {
+    active = "about";
+  }
+  gotoPage(active);
 };
