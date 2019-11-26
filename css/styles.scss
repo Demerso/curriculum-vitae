@@ -52,12 +52,12 @@ menu {
       padding: 15px;
       outline: 2px solid $light_shade;
       transform: rotate(5deg);
-      font-size: 1em;
+      font-size: 1.2em;
       transition: 0.2s ease-in-out;
       background-color: $dark_shade;
     }
     &.active span {
-      background-color: $main_color;
+      background-color: $dark_accent;
     }
     &:hover span {
       color: $dark_shade;
@@ -83,16 +83,15 @@ nav {
   height: 75px;
   position: fixed;
   margin: 5px;
-  background-color: $main_color;
+  background-color: $dark_accent;
   border-radius: 50%;
   bottom: 10px;
   right: 10px;
-  border: 0.5vh solid $light_shade;
-  box-shadow: 0px 0px 10px 0px black;
+  border: 5px solid $light_shade;
   transition: 0.2s ease-in-out;
   z-index: 2;
   &:hover {
-    box-shadow: 0px 0px 10px 0px $main_color, inset 0px 0px 10px 0px black;
+    border: 10px solid $dark_accent;
   }
 
   div {

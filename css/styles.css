@@ -17,7 +17,7 @@
 body {
   position: relative;
   font-family: "Open Sans", sans-serif;
-  background-color: #1e293a;
+  background-color: #02040f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,7 +28,7 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow: hidden;
-  color: #f2f6f2;
+  color: #ebebeb;
 }
 
 menu {
@@ -70,22 +70,22 @@ menu div span {
   display: block;
   margin: 10px;
   padding: 15px;
-  outline: 2px solid #f2f6f2;
+  outline: 2px solid #ebebeb;
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
-  font-size: 1em;
+  font-size: 1.2em;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-  background-color: #1e293a;
+  background-color: #02040f;
 }
 
 menu div.active span {
-  background-color: #fa8625;
+  background-color: #d81159;
 }
 
 menu div:hover span {
-  color: #1e293a;
-  background-color: #f2f6f2;
+  color: #02040f;
+  background-color: #ebebeb;
   font-size: 1.5em;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -119,27 +119,24 @@ nav {
   height: 75px;
   position: fixed;
   margin: 5px;
-  background-color: #fa8625;
+  background-color: #d81159;
   border-radius: 50%;
   bottom: 10px;
   right: 10px;
-  border: 0.5vh solid #f2f6f2;
-  -webkit-box-shadow: 0px 0px 10px 0px black;
-          box-shadow: 0px 0px 10px 0px black;
+  border: 5px solid #ebebeb;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   z-index: 2;
 }
 
 nav:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px #fa8625, inset 0px 0px 10px 0px black;
-          box-shadow: 0px 0px 10px 0px #fa8625, inset 0px 0px 10px 0px black;
+  border: 10px solid #d81159;
 }
 
 nav div {
   width: 35px;
   height: 5px;
-  background-color: #f2f6f2;
+  background-color: #ebebeb;
   margin: 2.5px 0;
   -webkit-transition: 0.2s ease-in-out, opacity 0.1s ease-in-out 0.1s;
   transition: 0.2s ease-in-out, opacity 0.1s ease-in-out 0.1s;
@@ -166,7 +163,7 @@ nav div:nth-child(4) {
 }
 
 nav.open {
-  background-color: #1e293a;
+  background-color: #02040f;
 }
 
 nav.open > div:nth-child(1) {
