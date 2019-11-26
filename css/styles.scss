@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -22,7 +23,6 @@ body {
 
 menu {
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -37,10 +37,13 @@ menu {
   z-index: 1;
   div {
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
     transition: 0.2s ease-in-out;
+    height: 70px;
+    margin-right: 10px;
+    justify-content: center;
     span {
-      display: block;
-      margin: 10px;
       padding: 15px;
       outline: 2px solid $light_shade;
       transform: rotate(5deg);
@@ -55,7 +58,7 @@ menu {
       color: $dark_shade;
       background-color: $light_shade;
       font-size: 1.5em;
-      transform: rotate(0deg);
+      transform: rotate(2.5deg);
     }
   }
   &.hidden {
@@ -68,7 +71,6 @@ menu {
 
 nav {
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   @include flexCenter;
   flex-direction: column;
@@ -139,10 +141,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    padding-left: 10px;
     width: 100vw;
     h1 {
       font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
     }
     content {
       font-size: 1.1em;
@@ -151,22 +156,69 @@ main {
         font-style: normal;
         color: $light_accent;
       }
+      a {
+        display: inline-block;
+        text-decoration: underline transparent;
+        color: $light_shade;
+        transition: text-decoration 0.2s ease-in-out;
+        &:hover,
+        &:active {
+          text-decoration: underline $light_accent;
+        }
+      }
+      block {
+        display: block;
+        padding: 5px;
+        border-left: 2px solid $light_accent;
+        margin: 20px 0;
+        h1 {
+          font-size: 1.2em;
+          font-weight: bold;
+          display: inline;
+        }
+        date {
+          font-size: 1.1em;
+          display: inline;
+          font-weight: normal;
+          &::before {
+            content: " | ";
+          }
+        }
+      }
     }
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px), (max-height: 430px) {
+  body {
+    overflow-y: auto;
+  }
   main {
     flex-direction: column;
+    width: 100%;
     height: auto;
     section {
-      height: 100vh;
+      margin-bottom: 20px;
+      height: auto;
+      content {
+        block {
+          h1 {
+            display: inline;
+          }
+          date {
+            display: block;
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
     }
   }
 }
 
 @media print {
-  body {
+  * {
     color: black !important;
   }
   nav,

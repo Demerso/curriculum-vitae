@@ -27,8 +27,6 @@ function fadeIn() {
 }
 
 window.onload = function() {
-  var scroll = document.scrollingElement.scrollLeft;
-  const links = document.getElementsByTagName("menu")[0].children;
   var active;
   if (document.cookie.search("active") != -1) {
     active = /active\=([^\;]+)/i.exec(document.cookie)[1];
@@ -36,5 +34,11 @@ window.onload = function() {
     active = "about";
   }
   gotoPage(active);
+  const nav = document.getElementsByTagName("nav")[0];
+  for (let i = 0; i < 4; i++) {
+    const bar = document.createElement("div");
+    nav.appendChild(bar);
+  }
+
   fadeIn();
 };
