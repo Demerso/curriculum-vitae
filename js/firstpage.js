@@ -6,7 +6,7 @@ function changeLang(lang = null) {
     { opacity: "1" },
     { opacity: "0" }
   );
-  setTimeout(function() {
+  setTimeout(() => {
     if (lang.search("fr") != -1) {
       window.location.pathname += "/fr";
     } else {

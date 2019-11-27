@@ -11,9 +11,9 @@ function gotoPage(pg) {
     const link = links[index];
     link.classList.remove("active");
   }
-  document.getElementById(pg + "link").classList.add("active");
+  document.getElementById(`${pg}link`).classList.add("active");
   document.getElementById(pg).scrollIntoView();
-  document.cookie = "active=" + pg;
+  document.cookie = `active=${pg}`;
 }
 
 function fadeIn() {
@@ -27,7 +27,7 @@ function fadeIn() {
 }
 
 window.onload = () => {
-  var active;
+  let active;
   if (document.cookie.search("active") != -1) {
     active = /active\=([^\;]+)/i.exec(document.cookie)[1];
   } else {
@@ -48,8 +48,8 @@ window.onwheel = _.throttle(event => {
   const pages = document
     .getElementsByTagName("main")[0]
     .getElementsByTagName("section");
-  var next = null;
-  var prev = null;
+  let next = null;
+  let prev = null;
   for (let i = 0; i < links.length; i++) {
     if (links[i].classList.contains("active")) {
       if (i < pages.length - 1) next = pages[i + 1].id;
