@@ -26,7 +26,7 @@ function fadeIn() {
   );
 }
 
-window.onload = function() {
+window.onload = () => {
   var active;
   if (document.cookie.search("active") != -1) {
     active = /active\=([^\;]+)/i.exec(document.cookie)[1];
@@ -42,3 +42,23 @@ window.onload = function() {
 
   fadeIn();
 };
+
+window.onwheel = _.throttle(event => {
+  const links = document.getElementsByTagName("menu")[0].children;
+  const pages = document
+    .getElementsByTagName("main")[0]
+    .getElementsByTagName("section");
+  var next = null;
+  var prev = null;
+  for (let i = 0; i < links.length; i++) {
+    if (links[i].classList.contains("active")) {
+      if (i < pages.length - 1) next = pages[i + 1].id;
+      if (i > 0) prev = pages[i - 1].id;
+    }
+  }
+  if (event.deltaY > 0) {
+    if (next != null) gotoPage(next);
+  } else {
+    if (prev != null) gotoPage(prev);
+  }
+}, 750);
