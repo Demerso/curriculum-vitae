@@ -276,13 +276,15 @@ main section content block h1 {
   display: inline;
 }
 
-main section content block date {
+main section content block date,
+main section content block tags {
   font-size: 1.1em;
   display: inline;
   font-weight: normal;
 }
 
-main section content block date::before {
+main section content block date::before,
+main section content block tags::before {
   content: " | ";
 }
 
@@ -305,10 +307,12 @@ main section content block date::before {
   main section content block h1 {
     display: inline;
   }
-  main section content block date {
+  main section content block date,
+  main section content block tags {
     display: block;
   }
-  main section content block date::before {
+  main section content block date::before,
+  main section content block tags::before {
     content: none;
   }
 }

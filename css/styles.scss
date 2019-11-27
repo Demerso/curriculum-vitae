@@ -176,7 +176,8 @@ main {
           font-weight: bold;
           display: inline;
         }
-        date {
+        date,
+        tags {
           font-size: 1.1em;
           display: inline;
           font-weight: normal;
@@ -205,7 +206,8 @@ main {
           h1 {
             display: inline;
           }
-          date {
+          date,
+          tags {
             display: block;
             &::before {
               content: none;
