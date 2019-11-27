@@ -4,8 +4,19 @@
     <link rel="alternate" hreflang="en" href="../en" />
 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+      integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
+      crossorigin="anonymous"
+    ></script>
 
     <link rel="stylesheet" href="../css/styles.css" />
     <script src="../js/master.js"></script>
@@ -14,129 +25,132 @@
     <title>Olivier Demers</title>
   </head>
   <body>
-    <div id="CV">
-      <header>
+    <menu class="hidden">
+      <div id="aboutlink" onclick="gotoPage('about');">
+        <span>À propos</span>
+      </div>
+      <div id="schoollink" onclick="gotoPage('school');">
+        <span>Scolarité</span>
+      </div>
+      <div id="experiencelink" onclick="gotoPage('experience');">
+        <span>Expérience</span>
+      </div>
+      <div id="portfoliolink" onclick="gotoPage('portfolio');">
+        <span>Portfolio</span>
+      </div>
+    </menu>
+    <main>
+      <nav onclick="toggleMenu()"></nav>
+      <section id="about">
         <h1>Olivier Demers</h1>
-      </header>
-
-      <div id="contact-info">
-        <div>2045, 9e Rang<br />Manseau (Québec)<br />G0X 1V0</div>
-        <div>(819) 266-9118<br />olidem123@gmail.com</div>
-      </div>
-      <h2>Formation scolaire</h2>
-      <div id="school" class="dated-info">
-        <div class="element">
-          <div>
-            Études secondaires, programme Ouverture sur le monde<br />
-            Polyvalente La Samare, Plessisville
-          </div>
-          <div>2012 - 2017</div>
-        </div>
-      </div>
-
-      <h2>Expérience professionnelle</h2>
-      <div id="jobs" class="dated-info">
-        <div class="element">
-          <div>
-            Homme à tout faire<br />
-            ORAPÉ, Plessisville
-            <div class="more-info">
-              <ul>
-                <li>Faire le service à la clientèle</li>
-                <li>Démonter certains articles</li>
-                <li>Vendre</li>
-                <li>Faire la caisse</li>
-                <li>Faire payer les clients</li>
-              </ul>
-            </div>
-          </div>
-          <div>Été 2016</div>
-        </div>
-        <div class="element">
-          <div>
-            Officiel mineur de hockey<br />
-            Aréna Léo-Paul-Boutin, Plessisville
-            <div class="more-info">
-              <ul>
-                <li>Chronométrer</li>
-                <li>Marquer</li>
-                <li>Annoncer</li>
-              </ul>
-            </div>
-          </div>
-          <div>2011 - 2015</div>
-        </div>
-      </div>
-
-      <h2>Implications scolaires</h2>
-      <div id="involvement" class="dated-info">
-        <div class="element">
-          <div>Capitaine de l’équipe de robotique</div>
-          <div>2015 - 2017</div>
-        </div>
-        <div class="element">
-          <div>
-            Membre de l’équipe de robotique<br />
-            Polyvalente La Samare, Plessisville
-          </div>
-          <div>2014 - 2015</div>
-        </div>
-      </div>
-
-      <h2>Distinctions particulières</h2>
-      <div id="distinctions" class="dated-info">
-        <div class="element">
-          <div>Nominé pour la médaille du Gouverneur</div>
-          <div>2017</div>
-        </div>
-        <div class="element">
-          <div>
-            Représentant du Centre-du-Québec aux Jeux du Québec en curling<br />
-            Médaillé de bronze
-          </div>
-          <div>2015 - 2017</div>
-        </div>
-        <div class="element">
-          <div>
-            Représentant du Centre-du-Québec au prix OSEntreprendre<br />
-            Équipe de robotique
-          </div>
-          <div>2016</div>
-        </div>
-        <div class="element">
-          <div>
-            Capitaine de l’alliance gagnante<br />
-            Festival de robotique de Montréal
-          </div>
-          <div>2016</div>
-        </div>
-        <div class="element">
-          <div>Nomine pour la médaille de l'Assemblée nationale</div>
-          <div>2015</div>
-        </div>
-      </div>
-
-      <h2>Qualités</h2>
-      <div id="qualities" class="list-info">
-        <div>Serviable</div>
-        <div>Sociable</div>
-        <div>Travaillant</div>
-        <div>Ponctuel</div>
-        <div>Autonome</div>
-        <div>Minutieux</div>
-      </div>
-
-      <h2>Aptitudes</h2>
-      <div id="qualities" class="list-info">
-        <div>Anglais avancé</div>
-        <div>Mathématiques</div>
-        <div>Informatique</div>
-        <div>Manuel</div>
-      </div>
-    </div>
-    <footer>
-      <span>Par Olivier Demers</span>
-      <a onclick="changeLang('en')">English Version</a>
-    </footer>
+        <content>
+          <p>
+            Je suis un <em>passionné</em> de la robotique, la programmation
+            l'informatique.
+          </p>
+          <p>
+            Je parle courament <em>Français</em> et <em>Anglais</em>, en plus
+            d'avoir des bases en <em>Espagnol</em>.
+          </p>
+          <p>
+            J'ai appris à programmer de façon <em>autonome</em>, mais
+            j'approfondis mes connaissances à l'université.
+          </p>
+          <p>Je suis <em>engagé</em> et toujours prêt à <em>travailler</em>.</p>
+          <br />
+          <h2>Pour me contacter:</h2>
+          <a href="tel:+1819-266-9118">(819) 266-9118</a>
+          <br />
+          <a href="mailto:olidem123@gmail.com">olidem123@gmail.com</a>
+        </content>
+      </section>
+      <section id="school">
+        <h1>Formation Scolaire</h1>
+        <content>
+          <block>
+            <h1>
+              <a href="https://www.ubishops.ca/" target="_blank"
+                >Université Bishop's</a
+              >
+            </h1>
+            <date>2019 - ...</date>
+            <p>Baccalauréat</p>
+            <p>Informatique</p>
+          </block>
+          <block>
+            <h1>
+              <a href="https://www.cegepvicto.ca/" target="_blank"
+                >Cégep de Victoriaville</a
+              >
+            </h1>
+            <date>2017 - 2019</date>
+            <p>Études collégiales</p>
+            <p>Sciences de la nature, profil pures et appliquées</p>
+          </block>
+          <block>
+            <h1>
+              <a
+                href="http://www.csbf.qc.ca/ecole/polyvalente-la-samare/"
+                target="_blank"
+                >Polyvalente La Samare</a
+              >
+            </h1>
+            <date>2012 - 2017</date>
+            <p>Études secondaires</p>
+            <p>Programme Ouverture sur le Monde</p>
+          </block>
+        </content>
+      </section>
+      <section id="experience">
+        <h1>Mes expériences</h1>
+        <content>
+          <block>
+            <h1>
+              <a href="https://www.machinexrecycling.com/" target="_blank"
+                >Machinex</a
+              >
+            </h1>
+            <date>2017 - ...</date>
+            <tags>Python - Jenkins - AutoIt</tags>
+            <p>Technicien en Assurance Qualité</p>
+            <p>Automatiser des tests logiciels</p>
+          </block>
+          <block>
+            <h1>
+              <a href="https://pls5618.com/" target="_blank">PLS 5618</a>
+            </h1>
+            <date>2015 - ...</date>
+            <tags>LabVIEW - Java</tags>
+            <p>Capitaine de programmation</p>
+            <p>Programmation pour mon équipe de Robituqe <i>FIRST</i></p>
+          </block>
+        </content>
+      </section>
+      <section id="portfolio">
+        <h1>Mon portfolio</h1>
+        <content>
+          <block>
+            <h1>
+              <a href="https://osiris.ubishops.ca/odemers/" target="_blank"
+                >Osiris</a
+              >
+            </h1>
+            <tags>HTML - PHP - CSS/SCSS - JS</tags>
+            <p>Mes différents projets Web universitaires</p>
+          </block>
+          <block>
+            <h1>
+              <a href="http://chromasky.com/" target="_blank">Chromasky</a>
+            </h1>
+            <tags>HTML - CSS/SCSS - JS</tags>
+            <p>Site Web pour un serveur Minecraft</p>
+          </block>
+          <p>
+            Plus sur
+            <a href="https://github.com/Demerso" target="_blank">GitHub</a>
+          </p>
+        </content>
+      </section>
+    </main>
   </body>
 </html>
