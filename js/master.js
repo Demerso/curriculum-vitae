@@ -56,9 +56,9 @@ window.onwheel = _.throttle(event => {
       if (i > 0) prev = pages[i - 1].id;
     }
   }
-  if (event.deltaY > 0) {
+  if (event.deltaY > 20) {
     if (next != null) gotoPage(next);
-  } else {
+  } else if (event.deltaY < -20) {
     if (prev != null) gotoPage(prev);
   }
 }, 750);
