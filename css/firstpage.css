@@ -2,7 +2,8 @@
 html body {
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
-  background-color: #02040f;
+  background-image: -webkit-gradient(linear, left top, right top, from(#02040f), to(#1a0412));
+  background-image: linear-gradient(to right, #02040f 0%, #1a0412 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
