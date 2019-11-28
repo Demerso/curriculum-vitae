@@ -13,7 +13,13 @@
 body {
   position: relative;
   font-family: "Open Sans", sans-serif;
-  background-color: $dark_shade;
+  //background-color: $dark_shade;
+  background-image: linear-gradient(
+    to right,
+    $dark_shade 0%,
+    mix($dark_shade, darken($dark_accent, 35)) 100%
+  );
+  background-attachment: fixed;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
