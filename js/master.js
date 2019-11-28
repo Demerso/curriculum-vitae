@@ -43,22 +43,26 @@ window.onload = () => {
   fadeIn();
 };
 
-window.onwheel = _.throttle(event => {
-  const links = document.getElementsByTagName("menu")[0].children;
-  const pages = document
-    .getElementsByTagName("main")[0]
-    .getElementsByTagName("section");
-  let next = null;
-  let prev = null;
-  for (let i = 0; i < links.length; i++) {
-    if (links[i].classList.contains("active")) {
-      if (i < pages.length - 1) next = pages[i + 1].id;
-      if (i > 0) prev = pages[i - 1].id;
+window.onwheel = _.throttle(
+  event => {
+    const links = document.getElementsByTagName("menu")[0].children;
+    const pages = document
+      .getElementsByTagName("main")[0]
+      .getElementsByTagName("section");
+    let next = null;
+    let prev = null;
+    for (let i = 0; i < links.length; i++) {
+      if (links[i].classList.contains("active")) {
+        if (i < pages.length - 1) next = pages[i + 1].id;
+        if (i > 0) prev = pages[i - 1].id;
+      }
     }
-  }
-  if (event.deltaY > 2) {
-    if (next != null) gotoPage(next);
-  } else if (event.deltaY < -2) {
-    if (prev != null) gotoPage(prev);
-  }
-}, 750);
+    if (event.deltaY > 2) {
+      if (next != null) gotoPage(next);
+    } else if (event.deltaY < -2) {
+      if (prev != null) gotoPage(prev);
+    }
+  },
+  500,
+  { trailing: false }
+);
