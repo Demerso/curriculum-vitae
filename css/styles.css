@@ -285,14 +285,16 @@ main section content block h1 {
 }
 
 main section content block date,
-main section content block tags {
+main section content block tags,
+main section content block git {
   font-size: 1.1em;
   display: inline;
   font-weight: normal;
 }
 
 main section content block date::before,
-main section content block tags::before {
+main section content block tags::before,
+main section content block git::before {
   content: " | ";
 }
 
