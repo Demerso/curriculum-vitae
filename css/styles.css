@@ -231,8 +231,8 @@ main section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 10px;
-  width: 100vw;
+  padding: 0 10px;
+  width: 100%;
 }
 
 main section h1 {

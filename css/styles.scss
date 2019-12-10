@@ -147,8 +147,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10px;
-    width: 100vw;
+    padding: 0 10px;
+    width: 100%;
     h1 {
       font-size: 2em;
     }
