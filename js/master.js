@@ -45,6 +45,7 @@ window.onload = () => {
 
 window.onwheel = _.throttle(
   event => {
+    if (window.innerHeight <= 430 || window.innerWidth <= 500) return;
     const links = document.getElementsByTagName("menu")[0].children;
     const pages = document
       .getElementsByTagName("main")[0]
