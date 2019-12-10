@@ -67,6 +67,7 @@ menu {
     }
   }
   &.hidden {
+    pointer-events: none;
     div {
       visibility: hidden;
       opacity: 0;

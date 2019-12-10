@@ -96,6 +96,10 @@ menu div:hover span {
           transform: rotate(2.5deg);
 }
 
+menu.hidden {
+  pointer-events: none;
+}
+
 menu.hidden div {
   visibility: hidden;
   opacity: 0;
