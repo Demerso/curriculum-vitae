@@ -20,7 +20,7 @@ header {
           justify-content: center;
   height: 100vh;
   width: 100%;
-  background-image: url("../img/header.jpg");
+  background-image: url("../img/backgrounds/header.jpg");
   background-position: top;
   background-size: cover;
   background-attachment: fixed;
@@ -43,6 +43,39 @@ header img {
      object-fit: cover;
 }
 
+section#cv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100px;
+}
+
+section#cv a {
+  margin-top: 5px;
+  padding: 10px 20px;
+  background-color: #e7e1ef;
+  color: #592c83;
+  text-decoration: none;
+  font-weight: bolder;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+section#cv a:hover {
+  background-color: #592c83;
+  color: #e7e1ef;
+}
+
 section#about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +91,10 @@ section#about {
       -ms-flex-align: stretch;
           align-items: stretch;
   padding: 10px;
+  background-image: url("../img/backgrounds/about.jpg");
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 section#about div {
