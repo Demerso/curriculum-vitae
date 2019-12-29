@@ -91,15 +91,10 @@ section#about {
       -ms-flex-align: stretch;
           align-items: stretch;
   padding: 10px;
-  background-image: url("../img/backgrounds/about.jpg");
-  background-position: top;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 section#about div {
   position: relative;
-  background-color: #e7e1ef;
   padding: 20px;
   margin: 5px;
   -ms-flex-preferred-size: 400px;
@@ -113,5 +108,67 @@ section#about div {
 section#about div:hover {
   -webkit-transform: scale(1.025);
           transform: scale(1.025);
+}
+
+section#portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 10px;
+  background-image: url("../img/backgrounds/about.jpg");
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section#portfolio .project {
+  position: relative;
+  background-color: #e7e1ef;
+  padding: 20px;
+  margin: 5px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+section#portfolio .project:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
+section#portfolio .project .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+section#portfolio .project .tags span {
+  display: block;
+  background-color: #bba8cc;
+  padding: 2px 5px;
+  margin: 2px;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+section#portfolio .project .tags span:hover {
+  background-color: #a38abc;
 }
 /*# sourceMappingURL=styles.css.map */
