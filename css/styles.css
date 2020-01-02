@@ -9,6 +9,13 @@
 }
 
 header {
+  text-align: center;
+  background-image: url("../img/backgrounds/header.jpg");
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,32 +25,33 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
-  width: 100%;
-  background-image: url("../img/backgrounds/header.jpg");
-  background-position: top;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
-header h1 {
-  font-weight: bold;
-  color: #592c83;
-  background: white;
-  position: absolute;
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background-color: white;
   padding: 50px;
 }
 
-header img {
-  max-height: 100vh;
-  width: 100%;
-  -o-object-position: top;
-     object-position: top;
-  -o-object-fit: cover;
-     object-fit: cover;
+header div h1 {
+  font-weight: bold;
+  color: #592c83;
 }
 
 section#cv {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,7 +65,6 @@ section#cv {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100px;
 }
 
 section#cv a {
@@ -76,7 +83,7 @@ section#cv a:hover {
   color: #e7e1ef;
 }
 
-section#about {
+section#exp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,8 +100,22 @@ section#about {
   padding: 10px;
 }
 
-section#about div {
-  position: relative;
+section#exp a {
+  color: black;
+  -webkit-text-decoration: underline transparent;
+          text-decoration: underline transparent;
+  -webkit-transition: -webkit-text-decoration 0.2s ease-in-out;
+  transition: -webkit-text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
+}
+
+section#exp a:hover {
+  -webkit-text-decoration: underline #592c83;
+          text-decoration: underline #592c83;
+}
+
+section#exp > div {
   padding: 20px;
   margin: 5px;
   -ms-flex-preferred-size: 400px;
@@ -105,9 +126,52 @@ section#about div {
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
-section#about div:hover {
+section#exp > div:hover {
   -webkit-transform: scale(1.025);
           transform: scale(1.025);
+}
+
+section#exp > div .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+section#exp > div .tags span {
+  display: block;
+  background-color: #bba8cc;
+  padding: 2px 5px;
+  margin: 2px;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+section#exp > div .tags span:hover {
+  background-color: #a38abc;
+}
+
+section#exp > div .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap-reverse;
+          flex-flow: row wrap-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#exp > div .title span {
+  font-weight: bold;
 }
 
 section#portfolio {
@@ -149,7 +213,7 @@ section#portfolio .project:hover {
           transform: scale(1.025);
 }
 
-section#portfolio .project .tags {
+section#portfolio .tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,7 +223,7 @@ section#portfolio .project .tags {
           flex-flow: row wrap;
 }
 
-section#portfolio .project .tags span {
+section#portfolio .tags span {
   display: block;
   background-color: #bba8cc;
   padding: 2px 5px;
@@ -168,7 +232,7 @@ section#portfolio .project .tags span {
   transition: background-color 0.2s ease-in-out;
 }
 
-section#portfolio .project .tags span:hover {
+section#portfolio .tags span:hover {
   background-color: #a38abc;
 }
 /*# sourceMappingURL=styles.css.map */

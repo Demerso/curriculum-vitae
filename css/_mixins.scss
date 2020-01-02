@@ -4,3 +4,20 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+@mixin tags() {
+  .tags {
+    display: flex;
+    flex-flow: row wrap;
+    span {
+      display: block;
+      background-color: $color3;
+      padding: 2px 5px;
+      margin: 2px;
+      transition: background-color 0.2s ease-in-out;
+      &:hover {
+        background-color: $color4;
+      }
+    }
+  }
+}
