@@ -62,13 +62,8 @@ section#exp {
   align-items: stretch;
   padding: 10px;
 
-  a {
-    color: black;
-    text-decoration: underline transparent;
-    transition: text-decoration 0.2s ease-in-out;
-    &:hover {
-      text-decoration: underline $color1;
-    }
+  h2 {
+    @include link();
   }
 
   & > div {
@@ -111,6 +106,10 @@ section#portfolio {
     transition: transform 0.2s ease-in-out;
     &:hover {
       transform: scale(1.025);
+    }
+
+    h3 {
+      @include link();
     }
   }
   @include tags();

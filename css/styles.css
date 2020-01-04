@@ -100,7 +100,7 @@ section#exp {
   padding: 10px;
 }
 
-section#exp a {
+section#exp h2 a {
   color: black;
   -webkit-text-decoration: underline transparent;
           text-decoration: underline transparent;
@@ -110,7 +110,7 @@ section#exp a {
   transition: text-decoration 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
 }
 
-section#exp a:hover {
+section#exp h2 a:hover {
   -webkit-text-decoration: underline #592c83;
           text-decoration: underline #592c83;
 }
@@ -211,6 +211,21 @@ section#portfolio .project {
 section#portfolio .project:hover {
   -webkit-transform: scale(1.025);
           transform: scale(1.025);
+}
+
+section#portfolio .project h3 a {
+  color: black;
+  -webkit-text-decoration: underline transparent;
+          text-decoration: underline transparent;
+  -webkit-transition: -webkit-text-decoration 0.2s ease-in-out;
+  transition: -webkit-text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
+}
+
+section#portfolio .project h3 a:hover {
+  -webkit-text-decoration: underline #592c83;
+          text-decoration: underline #592c83;
 }
 
 section#portfolio .tags {

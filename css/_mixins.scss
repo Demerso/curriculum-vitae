@@ -21,3 +21,14 @@
     }
   }
 }
+
+@mixin link() {
+  a {
+    color: black;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.2s ease-in-out;
+    &:hover {
+      text-decoration: underline $color1;
+    }
+  }
+}
