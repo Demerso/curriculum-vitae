@@ -27,6 +27,21 @@ header {
           justify-content: center;
 }
 
+header a {
+  color: black;
+  -webkit-text-decoration: underline transparent;
+          text-decoration: underline transparent;
+  -webkit-transition: -webkit-text-decoration 0.2s ease-in-out;
+  transition: -webkit-text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
+}
+
+header a:hover {
+  -webkit-text-decoration: underline #592c83;
+          text-decoration: underline #592c83;
+}
+
 header div {
   display: -webkit-box;
   display: -ms-flexbox;
