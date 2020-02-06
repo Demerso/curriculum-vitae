@@ -34,6 +34,12 @@ header {
   }
 }
 
+body > h1 {
+  text-align: center;
+  background-color: $color2;
+  padding: 10px 0;
+}
+
 section#cv {
   margin-top: 20px;
   display: flex;
@@ -108,9 +114,42 @@ section#portfolio {
       transform: scale(1.025);
     }
 
-    h3 {
-      @include link();
-    }
+    @include link();
   }
   @include tags();
+}
+
+section#articles {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 10px;
+
+  h3 {
+    text-align: center;
+    @include link();
+  }
+
+  & > div {
+    padding: 20px;
+    margin: 5px;
+    flex-basis: 400px;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.025);
+    }
+
+    @include tags();
+
+    .title {
+      display: flex;
+      flex-flow: row wrap-reverse;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
 }

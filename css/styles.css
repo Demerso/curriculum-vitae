@@ -50,6 +50,12 @@ header div h1 {
   color: #592c83;
 }
 
+body > h1 {
+  text-align: center;
+  background-color: #e7e1ef;
+  padding: 10px 0;
+}
+
 section#cv {
   margin-top: 20px;
   display: -webkit-box;
@@ -213,7 +219,7 @@ section#portfolio .project:hover {
           transform: scale(1.025);
 }
 
-section#portfolio .project h3 a {
+section#portfolio .project a {
   color: black;
   -webkit-text-decoration: underline transparent;
           text-decoration: underline transparent;
@@ -223,7 +229,7 @@ section#portfolio .project h3 a {
   transition: text-decoration 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
 }
 
-section#portfolio .project h3 a:hover {
+section#portfolio .project a:hover {
   -webkit-text-decoration: underline #592c83;
           text-decoration: underline #592c83;
 }
@@ -249,5 +255,100 @@ section#portfolio .tags span {
 
 section#portfolio .tags span:hover {
   background-color: #a38abc;
+}
+
+section#articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 10px;
+}
+
+section#articles h3 {
+  text-align: center;
+}
+
+section#articles h3 a {
+  color: black;
+  -webkit-text-decoration: underline transparent;
+          text-decoration: underline transparent;
+  -webkit-transition: -webkit-text-decoration 0.2s ease-in-out;
+  transition: -webkit-text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
+}
+
+section#articles h3 a:hover {
+  -webkit-text-decoration: underline #592c83;
+          text-decoration: underline #592c83;
+}
+
+section#articles > div {
+  padding: 20px;
+  margin: 5px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+section#articles > div:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
+section#articles > div .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+section#articles > div .tags span {
+  display: block;
+  background-color: #bba8cc;
+  padding: 2px 5px;
+  margin: 2px;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+section#articles > div .tags span:hover {
+  background-color: #a38abc;
+}
+
+section#articles > div .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap-reverse;
+          flex-flow: row wrap-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#articles > div .title span {
+  font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */
