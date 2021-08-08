@@ -2,7 +2,7 @@
 
 ## FR
 
-Ce site va surtout être utiliser pour partager mon portfolio et mes expériences dans le domaine à des employeurs.
+Ce site va surtout être utilisé pour partager mon portfolio et mes expériences dans le domaine à des employeurs.
 
 ## EN
 
