@@ -57,7 +57,8 @@ header div {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   background-color: white;
-  padding: 50px;
+  padding: 4rem;
+  border-radius: 1rem;
 }
 
 header div h1 {
@@ -68,11 +69,11 @@ header div h1 {
 body > h1 {
   text-align: center;
   background-color: #e7e1ef;
-  padding: 10px 0;
+  padding: 1rem 0;
 }
 
 section#cv {
-  margin-top: 20px;
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,14 +90,15 @@ section#cv {
 }
 
 section#cv a {
-  margin-top: 5px;
-  padding: 10px 20px;
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
   background-color: #e7e1ef;
   color: #592c83;
   text-decoration: none;
   font-weight: bolder;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  border-radius: 1rem;
 }
 
 section#cv a:hover {
@@ -119,6 +121,7 @@ section#exp {
       -ms-flex-align: stretch;
           align-items: stretch;
   padding: 10px;
+  gap: 1rem;
 }
 
 section#exp h2 a {
@@ -137,14 +140,14 @@ section#exp h2 a:hover {
 }
 
 section#exp > div {
-  padding: 20px;
-  margin: 5px;
-  -ms-flex-preferred-size: 400px;
-      flex-basis: 400px;
+  padding: 1.5rem;
+  -ms-flex-preferred-size: 30rem;
+      flex-basis: 30rem;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  border-radius: 1rem;
 }
 
 section#exp > div:hover {
@@ -153,6 +156,8 @@ section#exp > div:hover {
 }
 
 section#exp > div .tags {
+  -webkit-margin-before: 0.5rem;
+          margin-block-start: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,13 +165,15 @@ section#exp > div .tags {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  gap: 0.5rem;
+  cursor: default;
 }
 
 section#exp > div .tags span {
   display: block;
   background-color: #bba8cc;
-  padding: 2px 5px;
-  margin: 2px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
 }
@@ -209,7 +216,8 @@ section#portfolio {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  padding: 10px;
+  padding: 1rem;
+  gap: 1rem;
   background-image: url("../img/backgrounds/about.jpg");
   background-position: top;
   background-size: cover;
@@ -219,14 +227,14 @@ section#portfolio {
 section#portfolio .project {
   position: relative;
   background-color: #e7e1ef;
-  padding: 20px;
-  margin: 5px;
-  -ms-flex-preferred-size: 400px;
-      flex-basis: 400px;
+  padding: 1.5rem;
+  -ms-flex-preferred-size: 30rem;
+      flex-basis: 30rem;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  border-radius: 1rem;
 }
 
 section#portfolio .project:hover {
@@ -250,6 +258,8 @@ section#portfolio .project a:hover {
 }
 
 section#portfolio .tags {
+  -webkit-margin-before: 0.5rem;
+          margin-block-start: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,13 +267,15 @@ section#portfolio .tags {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  gap: 0.5rem;
+  cursor: default;
 }
 
 section#portfolio .tags span {
   display: block;
   background-color: #bba8cc;
-  padding: 2px 5px;
-  margin: 2px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
 }
@@ -286,7 +298,8 @@ section#articles {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  padding: 10px;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 section#articles h3 {
@@ -309,10 +322,9 @@ section#articles h3 a:hover {
 }
 
 section#articles > div {
-  padding: 20px;
-  margin: 5px;
-  -ms-flex-preferred-size: 400px;
-      flex-basis: 400px;
+  padding: 1.5rem;
+  -ms-flex-preferred-size: 30rem;
+      flex-basis: 30rem;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
@@ -325,6 +337,8 @@ section#articles > div:hover {
 }
 
 section#articles > div .tags {
+  -webkit-margin-before: 0.5rem;
+          margin-block-start: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,13 +346,15 @@ section#articles > div .tags {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  gap: 0.5rem;
+  cursor: default;
 }
 
 section#articles > div .tags span {
   display: block;
   background-color: #bba8cc;
-  padding: 2px 5px;
-  margin: 2px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
 }

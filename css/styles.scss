@@ -27,7 +27,8 @@ header {
     justify-content: center;
     flex-flow: column nowrap;
     background-color: white;
-    padding: 50px;
+    padding: 4rem;
+    border-radius: 1rem;
     h1 {
       font-weight: bold;
       color: $color1;
@@ -38,23 +39,24 @@ header {
 body > h1 {
   text-align: center;
   background-color: $color2;
-  padding: 10px 0;
+  padding: 1rem 0;
 }
 
 section#cv {
-  margin-top: 20px;
+  margin-top: 2rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   a {
-    margin-top: 5px;
-    padding: 10px 20px;
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
     background-color: $color2;
     color: $color1;
     text-decoration: none;
     font-weight: bolder;
     transition: 0.2s ease-in-out;
+    border-radius: 1rem;
     &:hover {
       background-color: $color1;
       color: $color2;
@@ -68,16 +70,17 @@ section#exp {
   justify-content: space-evenly;
   align-items: stretch;
   padding: 10px;
+  gap: 1rem;
 
   h2 {
     @include link();
   }
 
   & > div {
-    padding: 20px;
-    margin: 5px;
-    flex-basis: 400px;
+    padding: 1.5rem;
+    flex-basis: 30rem;
     transition: transform 0.2s ease-in-out;
+    border-radius: 1rem;
     &:hover {
       transform: scale(1.025);
     }
@@ -101,16 +104,17 @@ section#portfolio {
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: stretch;
-  padding: 10px;
+  padding: 1rem;
+  gap: 1rem;
   @include fixedBackground("../img/backgrounds/about.jpg");
 
   .project {
     position: relative;
     background-color: $color2;
-    padding: 20px;
-    margin: 5px;
-    flex-basis: 400px;
+    padding: 1.5rem;
+    flex-basis: 30rem;
     transition: transform 0.2s ease-in-out;
+    border-radius: 1rem;
     &:hover {
       transform: scale(1.025);
     }
@@ -125,7 +129,8 @@ section#articles {
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: stretch;
-  padding: 10px;
+  padding: 1rem;
+  gap: 1rem;
 
   h3 {
     text-align: center;
@@ -133,9 +138,8 @@ section#articles {
   }
 
   & > div {
-    padding: 20px;
-    margin: 5px;
-    flex-basis: 400px;
+    padding: 1.5rem;
+    flex-basis: 30rem;
     transition: transform 0.2s ease-in-out;
     &:hover {
       transform: scale(1.025);
